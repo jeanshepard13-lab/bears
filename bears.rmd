@@ -32,18 +32,29 @@ Then order them from worst to best by its value of Adjusted-Rsquared (bigger is 
 ## Model LENGTH ~ HEADLEN
 
 ```{r}
-plot(LENGTH~HEADLEN,data=bears)
+plot(LENGTH~HEADLEN,data=bears, pch=19)
+grid()
 ```
-As the head length increases it gets bigger.
+As the head length increases it gets bigger
 
 ```{r}
 model.1 <- lm(LENGTH~HEADLEN,data=bears)
 summary.lm(model.1)
 ```
 Adjusted R-squared:  0.8434
+
 ## Model LENGTH ~ HeadWTH
 
+```{r}
+plot(LENGTH~HEADWTH,data=bears, pch=19)
+grid()
+```
 
+```{r}
+model.2 <- lm(LENGTH~HEADWTH,data=bears)
+summary.lm(model.2)
+```
+Adjusted R-squared:  0.5321
 
 ## Model LENGTH ~ CHEST
 
